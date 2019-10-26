@@ -16,7 +16,8 @@ def get_japanese_emoticon(file_path = './lib/emoticons.yml', english_emoticons)
   if library["get_emoticons"].include?(english_emoticons)
     library["get_emoticons"][english_emoticons]
   else
-end
+    
+  end 
 end
 
 def get_english_meaning(file_path = './lib/emoticons.yml', japanese_emoticons)
