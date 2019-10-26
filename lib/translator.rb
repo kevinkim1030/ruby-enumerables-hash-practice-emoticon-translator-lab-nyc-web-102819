@@ -6,7 +6,9 @@ def load_library(file_path)
   keys = {"get_meaning" => {}, "get_emoticon" => {}}
   library.each do |meaning, emoticons|
     keys["get_meaning"][emoticons[1]] = meaning
+    keys["get_emoticon"][emoticons[0]] = emoticons[1]
   end
+  keys
 end
 
 def get_japanese_emoticon
