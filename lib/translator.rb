@@ -4,6 +4,9 @@ require 'yaml'
 def load_library(file_path)
   library = YAML.load_file(file_path)
   keys = {"get_meaning" => {}, "get_emoticon" => {}}
+  library.each do |meaning, emoticons|
+    keys["get_meaning"][emoticons[1]] = meaning
+  end
 end
 
 def get_japanese_emoticon
